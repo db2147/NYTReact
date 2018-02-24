@@ -3,7 +3,7 @@ This is a react application that uses the New York Times api to query ariticles 
 <br><br>
 This one page application comprises three different sections: one to <strong>search</strong>, one for <strong>results</strong>, and one for <strong>saved articles</strong>. &nbsp; The react router also makes this app very fast and responsive for a positive user experince. &nbsp; In a more traditional program the application would need to reload the page each time there is a change.&nbsp; Not so with React! &nbsp;The React router only reloads the part of the page that has changed, thus saving time by not having to reload the whole document just for one small change. &nbsp;This is what has made react so great for many well known applications (like Facebook, Walmart, and Bloomberg) that have lots of moving parts. 
 
-<img src="my-app/client/public/images/React_logo_wordmark.png" alt="Drawing" style="width: 200px; float: left;" />
+<img src="client/public/images/React_logo_wordmark.png" alt="Drawing" style="width: 200px; float: left;" />
 <br>
 <br>
 <br>
