@@ -11,11 +11,11 @@ This one page application comprises three different sections: one to <strong>sea
 The articles that come back in the search will be stored in Mongo Db.&nbsp; The user has the option to either save the articles, or to remove them. &nbsp;Several express routes are needed for this app: <br><br>
 
 <ul>
-<li>one for the get function that my component will use to query MongoDB for all saved articles
+<li>one for the <strong>get</strong> function that my component will use to query MongoDB for all saved articles
 <br><br>
-<li>a route for the post function that my components will use to save an article to the database
+<li>a route for the <strong>post</strong> function that my components will use to save an article to the database
 <br><br>
-<li>a delete route my components will use to delete a saved article in the database
+<li>a <strong>delete</strong> route my components will use to delete a saved article in the database
 <br><br>
-<li>lastly a get route will load my single HTML page (with ReactJS)
+<li>lastly a <strong>get</strong> route will load my single HTML page (with ReactJS)
 </ul>

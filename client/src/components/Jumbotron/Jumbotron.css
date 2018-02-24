@@ -5,3 +5,15 @@
 .jumbotron h2 {
   font-size: 26px;
 }
+
+/* .jumbotron{
+      background: url('https://www.pexels.com/photo/architecture-background-buildings-business-218983.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb') no-repeat center;
+      background-size: cover;
+    } */
+
+.jumbotron {
+  background: url('https://images.pexels.com/photos/97050/pexels-photo-97050.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb') no-repeat center;
+  background-size: cover;
+  color: white;
+}
+   
