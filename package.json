@@ -7,11 +7,12 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "mongoose": "^5.0.5",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "concurrently": "^3.5.1"
   },
   "scripts": {
     "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "start": "concurrently \"node server.js\" \"npm run client\"",
     "build": "node scripts/build.js",
     "server": "node server.js"
   },
