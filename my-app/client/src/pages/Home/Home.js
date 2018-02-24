@@ -3,58 +3,60 @@ import Jumbotron from "../../components/Jumbotron";
 // import Panel from "../../components/Panel";
 // import Article from "../../components/Article";
 import Footer from "../../components/Footer";
-// import API from "../../utils/API";
+import API from "../../utils/API";
+
 import { Col, Row, Container } from "../../components/Grid";
 // import { List } from "../../components/List";
-import { Input, FormBtn } from "../../components/Form";
+import { Input, FormBtn, TextArea, Form } from "../../components/Form";
 
 class Home extends Component {
 
-// class News extends Component {
-//   state = {
-//     article: [],
-//     title: "",
-//     startyear: "",
-//     endyear: ""
-//   };
+  // class News extends Component {
+  state = {
+    article: [],
+    title: "",
+    startyear: "",
+    endyear: ""
+  };
 
-//   componentDidMount() {
-//     this.loadArticles();
-//   }
+  componentDidMount() {
+    this.loadArticle();
+  }
 
-//   loadArticlesrs = () => {
-//     API.getArticle()
-//       .then(res =>
-//         this.setState({ books: res.data, title: "", author: "", synopsis: "" })
-//       )
-//       .catch(err => console.log(err));
-//   };
+  loadArticle = () => {
+    // API.getArticle()
+    //   .then(res =>
+    //     this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+    //   )
+    //   .catch(err => console.log(err));
+  };
 
-//   deleteArticle = id => {
-//     API.deleteArticle(id)
-//       .then(res => this.loadArticless())
-//       .catch(err => console.log(err));
-//   };
+  // deleteArticle = id => {
+  //   API.deleteArticle(id)
+  //     .then(res => this.loadArticless())
+  //     .catch(err => console.log(err));
+  // };
 
-//   handleInputChange = event => {
-//     const { name, value } = event.target;
-//     this.setState({
-//       [name]: value
-//     });
-//   };
+  handleInputChange = event => {
+    console.log(this.state);
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
 
-//   handleFormSubmit = event => {
-//     event.preventDefault();
-//     if (this.state.title && this.state.author) {
-//       API.saveArticle({
-//         title: this.state.title,
-//         author: this.state.author,
-//         synopsis: this.state.synopsis
-//       })
-//         .then(res => this.loadArticle())
-//         .catch(err => console.log(err));
-//     }
-//   };
+  handleFormSubmit = event => {
+    event.preventDefault();
+    if (this.state.title && this.state.author) {
+      API.saveArticles({
+        title: this.state.title,
+        author: this.state.author,
+        synopsis: this.state.synopsis
+      })
+        .then(res => this.loadArticle())
+        .catch(err => console.log(err));
+    }
+  };
 
 
   render() {
@@ -70,6 +72,36 @@ class Home extends Component {
                 Search for and save articles of interest.
               </h2>
             </Jumbotron>
+          </Col>
+        </Row>
+        <Row>
+          <Col size="md-12">
+            <Form>
+              <Input
+                value={this.state.title}
+                onChange={this.handleInputChange}
+                name="title"
+                placeholder="Title (required)"
+              />
+              <Input
+                value={this.state.startyear}
+                onChange={this.handleInputChange}
+                name="startyear"
+                placeholder="Startyear (required)"
+              />
+              <Input
+                value={this.state.endyear}
+                onChange={this.handleInputChange}
+                name="endyear"
+                placeholder="Endyear (required)"
+              />
+              <FormBtn
+                disabled={!this.state.title && !this.state.year}
+                onClick={this.handleFormSubmit}
+              >
+                Submit Article
+                </FormBtn>
+            </Form>
           </Col>
         </Row>
         <Footer />
@@ -120,7 +152,7 @@ export default Home;
 //               </FormBtn>
 //           </form>
 //         </Col>
-        {/* <Col size="md-12>
+{/* <Col size="md-12>
           <Jumbotron>
             <h1>Books On My List</h1>
           </Jumbotron>
@@ -141,7 +173,7 @@ export default Home;
               <h3>No Results to Display</h3>
             )}
         </Col> */}
-      {/* </Row>
+{/* </Row>
     </Container>
   );
 }

@@ -2,8 +2,8 @@ import axios from "axios";
 
 export default {
     // Gets all news
-    getNews: function () {
-        return axios.get("/api/news");
+    getArticles: function () {
+        return axios.get("/api/article");
     },
     // Gets the news with the given id
     // getNews: function (id) {
@@ -14,7 +14,7 @@ export default {
         return axios.delete("/api/news/" + id);
     },
     // Saves news to the database
-    saveNews: function (newsData) {
+    saveArticles: function (newsData) {
         return axios.post("/api/news", newsData);
     }
 };
