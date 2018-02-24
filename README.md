@@ -8,7 +8,7 @@ This one page application comprises three different sections: one to <strong>sea
 <br>
 <br>
 <br>
-The articles that come back in the search will be stored in Mongo Db.&nbsp; The user has the option to either save the articles, or to remove them. &nbsp;Several express routes are needed for this app: 
+The articles that come back in the search will be stored in Mongo Db.&nbsp; The user has the option to either save the articles, or to remove them. &nbsp;Several express routes are needed for this app: <br><br>
 
 <ul>
 <li>one for the get function that my component will use to query MongoDB for all saved articles
