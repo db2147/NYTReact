@@ -1,8 +1,8 @@
 import React from "react";
-import formatDate from "../../utils/formatDate";
+import formatDate from "../../utils/API";
 import { ListItem } from "../List";
 
-const Article = ({ title, url, _id, date, handleClick, buttonText, saved }) => (
+const ArticleListItem = ({ title, url, _id, date, handleClick, buttonText, saved }) => (
   <ListItem>
     <h3>
       <em>{title}</em>{" "}
@@ -21,4 +21,4 @@ const Article = ({ title, url, _id, date, handleClick, buttonText, saved }) => (
   </ListItem>
 );
 
-export default Article;
+export default ArticleListItem;

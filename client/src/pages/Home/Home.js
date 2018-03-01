@@ -1,16 +1,11 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
-// import Panel from "../../components/Panel";
-// import Article from "../../components/Article";
 import API from "../../utils/API";
-
 import { Col, Row, Container } from "../../components/Grid";
-// import { List } from "../../components/List";
 import { Input, FormBtn, TextArea, Form } from "../../components/Form";
 
 class Home extends Component {
 
-  // class News extends Component {
   state = {
     article: [],
     title: "",
@@ -94,6 +89,11 @@ class Home extends Component {
                 name="endyear"
                 placeholder="Endyear (required)"
               />
+              <button
+                disabled={!this.state.title && !this.state.year}
+                onClick={this.handleFormSubmit}>
+                Submit Article
+              </button>
               <FormBtn
                 disabled={!this.state.title && !this.state.year}
                 onClick={this.handleFormSubmit}
