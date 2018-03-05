@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
-import { Input, FormBtn, TextArea, Form } from "../../components/Form";
+import { Input, FormBtn, Form } from "../../components/Form";
 
 class Home extends Component {
 

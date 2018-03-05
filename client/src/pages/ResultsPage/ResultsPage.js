@@ -5,6 +5,10 @@ import ArticleListItem from '../../components/ArticleListItem/ArticleListItem';
 
 class ResultsPage extends Component {
 
+    state = {
+        article: []
+    };
+
      
 
     componentDidMount() {
