@@ -89,11 +89,6 @@ class Home extends Component {
                 name="endyear"
                 placeholder="Endyear (required)"
               />
-              <button
-                disabled={!this.state.title && !this.state.year}
-                onClick={this.handleFormSubmit}>
-                Submit Article
-              </button>
               <FormBtn
                 disabled={!this.state.title && !this.state.year}
                 onClick={this.handleFormSubmit}

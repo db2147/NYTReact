@@ -2,10 +2,10 @@ const express = require("express");         // for our routes
 const bodyParser = require("body-parser");  
 const mongoose = require("mongoose");
 const routes = require("./routes");
-// const cors = require("./cors");
+const cors = require("./cors");
 const app = express();
 const PORT = process.env.PORT || 3001;
-
+app.use(cors())
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({
     extended: false
