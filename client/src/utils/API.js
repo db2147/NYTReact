@@ -1,20 +1,21 @@
 import axios from "axios";
+import filterParams from "./filterParams";
 
 export default {
-    // Gets all news
-    getArticles: function () {
-        return axios.get("/api/article");
-    },
-    // Gets the news with the given id
-    // getNews: function (id) {
-    //     return axios.get("/api/news/" + id);
-    // },
-    // Deletes the news with the given id
-    deleteNews: function (id) {
-        return axios.delete("/api/news/" + id);
-    },
-    // Saves news to the database
-    saveArticles: function (newsData) {
-        return axios.post("/api/news", newsData);
-    }
+  // Gets articles from the NYT API
+  getArticles: function(params) {
+    return axios.get("/api/nyt", { params: filterParams(params) });
+  },
+  // Gets all saved articles
+  getSavedArticles: function() {
+    return axios.get("/api/articles");
+  },
+  // Deletes the saved article with the given id
+  deleteArticle: function(id) {
+    return axios.delete("/api/articles/" + id);
+  },
+  // Saves an article to the database
+  saveArticle: function(articleData) {
+    return axios.post("/api/articles", articleData);
+  }
 };

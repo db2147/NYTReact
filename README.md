@@ -1,21 +1,42 @@
-# NYTReact
-This is a react application that uses the New York Times api to query ariticles from the NYT database and saves them to my application.
-<br><br>
-This one page application comprises three different sections: one to <strong>search</strong>, one for <strong>results</strong>, and one for <strong>saved articles</strong>. &nbsp; The react router also makes this app very fast and responsive for a positive user experince. &nbsp; In a more traditional program the application would need to reload the page each time there is a change.&nbsp; Not so with React! &nbsp;The React router only reloads the part of the page that has changed, thus saving time by not having to reload the whole document just for one small change. &nbsp;This is what has made react so great for many well known applications (like Facebook, Walmart, and Bloomberg) that have lots of moving parts. 
+# Create React Express App
 
-<img src="client/public/images/React_logo_wordmark.png" alt="Drawing" style="width: 200px; float: left;" />
-<br>
-<br>
-<br>
-<br>
-The articles that come back in the search will be stored in Mongo Db.&nbsp; The user has the option to either save the articles, or to remove them. &nbsp;Several express routes are needed for this app: <br><br>
+## About This Boilerplate
 
-<ul>
-<li>one for the <strong>get</strong> function that my component will use to query MongoDB for all saved articles
-<br><br>
-<li>a route for the <strong>post</strong> function that my components will use to save an article to the database
-<br><br>
-<li>a <strong>delete</strong> route my components will use to delete a saved article in the database
-<br><br>
-<li>lastly a <strong>get</strong> route will load my single HTML page (with ReactJS)
-</ul>
+This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+
+The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+
+## Starting the app locally
+
+Start by installing front and backend dependencies. While in this directory, run the following commands:
+
+```
+yarn install
+cd client
+yarn install
+cd ..
+``
+
+After both installations complete, run the following command in your terminal:
+
+```
+yarn start
+```
+
+That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+
+## Deployment (Heroku)
+
+After confirming that you have an up to date git repository and a Heroku app created, complete the following:
+
+1. Build the React app for production by running the following command:
+
+```
+yarn build
+```
+
+2. Add and commit all changes to git
+
+3. Push to Heroku
+
+If all previous steps were followed correctly, your application should be deployed to Heroku!

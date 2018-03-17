@@ -1,32 +1,24 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "nyt-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.12.1"
+  },
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
-    "concurrently": "^3.5.1",
-    "cors": "^2.8.4",
     "express": "^4.16.2",
-    "mongoose": "^5.0.5",
-    "request": "^2.83.0"
-  },
-  "scripts": {
-    "client": "node scripts/start-client.js",
-    "start": "concurrently \"node server.js\" \"npm run client\"",
-    "build": "node scripts/build.js",
-    "server": "node server.js"
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-  "main": "App.js",
-  "devDependencies": {
-    "concurrently": "^3.5.1",
-    "nodemon": "^1.15.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "NYTReact"
-  },
-  "author": "David Bierma",
-  "license": "ISC"
+    "mongoose": "^4.13.3"
+  }
 }
